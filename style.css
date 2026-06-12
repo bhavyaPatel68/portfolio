@@ -1,0 +1,175 @@
+body {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #EF1A2D;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 30px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-logo {
+  height: 40px;
+  width: auto;
+}
+
+.navbar h1 {
+  color: white;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  color: #0096D6;
+}
+
+.stripe-bar {
+  display: flex;
+  height: 8px;
+}
+
+.stripe {
+  flex: 1;
+}
+
+.stripe.red {
+  background-color: #EF1A2D;
+}
+
+.stripe.white {
+  background-color: white;
+}
+
+.stripe.blue {
+  background-color: #0096D6;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px 20px 80px;
+  border-left: 6px solid #EF1A2D;
+  margin: 40px;
+  background-color: #222;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+#ferrari-car {
+  width: 900px;
+  max-width: 95%;
+  display: block;
+  margin: 0 auto 30px auto;
+  transition: transform 0.05s linear;
+}
+
+.hero-label {
+  color: #EF1A2D;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.hero-name {
+  color: white;
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.hero p {
+  color: #aaa;
+}
+
+.red-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background-color: #EF1A2D;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.red-button:hover {
+  background-color: #c0001f;
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background-color: #EF1A2D;
+  margin: 40px 30px;
+}
+
+h2 {
+  color: #EF1A2D;
+  margin: 0 30px 16px 30px;
+}
+
+.skills-list {
+  margin: 0 30px 0 50px;
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+.project-card {
+  background-color: #2a2a2a;
+  border-left: 5px solid #0096D6;
+  padding: 16px;
+  margin: 10px 30px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  background-color: #333;
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  color: white;
+}
+
+.project-card p {
+  color: #ccc;
+}
+
+#contact {
+  margin: 0 30px;
+}
+
+#contact a {
+  color: #0096D6;
+}
+
+footer {
+  background-color: #EF1A2D;
+  text-align: center;
+  padding: 16px;
+  margin-top: 40px;
+}
+
+footer p {
+  color: white;
+  margin: 0;
+  font-weight: bold;
+}

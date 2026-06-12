@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bhavya Patel | Portfolio</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div class="navbar">
+    <div class="navbar-left">
+      <img src="assets/logo.png" alt="Ferrari Logo" class="navbar-logo">
+      <h1>Bhavya Patel</h1>
+    </div>
+
+    <div class="nav-links">
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <div class="stripe-bar">
+    <div class="stripe red"></div>
+    <div class="stripe white"></div>
+    <div class="stripe blue"></div>
+  </div>
+
+    <img src="assets/Ferrari.png" alt="Ferrari F1 Car" id="ferrari-car">
+
+  <div class="hero">
+
+    <p class="hero-label">🏁 SCUDERIA PORTFOLIO</p>
+
+    <h2 class="hero-name">Bhavya Patel</h2>
+
+    <p>Developer | Evansville, IN</p>
+
+    <a href="#projects" class="red-button">View Projects</a>
+
+  </div>
+
+  <hr>
+
+  <div id="skills">
+    <h2>Skills</h2>
+
+    <ul class="skills-list">
+      <li>Web Development</li>
+      <li>Java</li>
+      <li>Python</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+      <h3>Project Name</h3>
+      <p>Short description of what this project does.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Project Name</h3>
+      <p>Short description of what this project does.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Project Name</h3>
+      <p>Short description of what this project does.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div id="contact">
+    <h2>Contact</h2>
+
+    <p>
+      Email me at
+      <a href="mailto:bp534532@gmail.com">bp534532@gmail.com</a>
+    </p>
+  </div>
+
+  <div class="stripe-bar">
+    <div class="stripe red"></div>
+    <div class="stripe white"></div>
+    <div class="stripe blue"></div>
+  </div>
+
+  <footer>
+    <p>Bhavya Patel © 2026 | Forza Ferrari</p>
+  </footer>
+
+  <script>
+    const car = document.getElementById("ferrari-car");
+
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+
+      car.style.transform =
+        `translateX(-${scrollY * 3}px) rotate(-${scrollY * 0.03}deg)`;
+    });
+  </script>
+
+</body>
+
+</html>
