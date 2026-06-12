@@ -79,6 +79,8 @@ body {
   display: block;
   margin: 0 auto 30px auto;
   transition: transform 0.05s linear;
+  margin-top: -100px;
+  margin-bottom: -100px;
 }
 
 .hero-label {
