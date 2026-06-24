@@ -168,12 +168,14 @@ h2 {
 }
 
 .project-card {
+  display: block;
   background-color: #2a2a2a;
   border-left: 5px solid #0096D6;
   padding: 16px;
   margin: 10px 30px;
   border-radius: 4px;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .project-card:hover {
@@ -187,6 +189,11 @@ h2 {
 
 .project-card p {
   color: #ccc;
+}
+
+.project-card h3,
+.project-card p {
+  margin-top: 0;
 }
 
 #contact {

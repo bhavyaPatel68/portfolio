@@ -1,4 +1,4 @@
-    const car = document.getElementById("ferrari-car");
+    let car = document.getElementById("ferrari-car");
 
     window.addEventListener("scroll", () => {
       const scrollY = window.scrollY;
