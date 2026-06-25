@@ -120,7 +120,7 @@
 
   <div id="contact">
     <h2>Contact</h2>
-
+    <img src="assets/invertedFerrari.png" alt="invert-Ferrari F1 Car" id="invert-ferrari-car">
     <p>
       Email me at
       <a href="mailto:bp534532@gmail.com">bp534532@gmail.com</a>
@@ -135,18 +135,7 @@
   <footer>
     <p>Bhavya Patel © 2026 | Forza Ferrari</p>
   </footer>
-
-  <script>
-    const car = document.getElementById("ferrari-car");
-
-    window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
-
-      car.style.transform =
-        `translateX(-${scrollY * 3}px) rotate(-${scrollY * 0.03}deg)`;
-    });
-  </script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>

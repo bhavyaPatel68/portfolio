@@ -82,6 +82,15 @@ body {
   margin-top: -100px;
   margin-bottom: -100px;
 }
+#invert-ferrari-car {
+  width: 900px;
+  max-width: 95%;
+  display: block;
+  margin: 0 auto 30px auto;
+  transition: transform 0.05s linear;
+  margin-top: -100px;
+  margin-bottom: -100px;
+}
 
 .hero-label {
   color: #EF1A2D;
@@ -289,3 +298,4 @@ margin-bottom: 50px;
     .stripe-bar-skinny .s-red-skinny   { background: #EF1A2D; }
     .stripe-bar-skinny .s-white-skinny { background: rgba(255,255,255,.6); }
     .stripe-bar-skinny .s-blue-skinny  { background: #0096D6; }
+
