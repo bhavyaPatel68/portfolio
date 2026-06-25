@@ -208,7 +208,6 @@ footer {
   background-color: #EF1A2D;
   text-align: center;
   padding: 16px;
-  margin-top: 40px;
 }
 
 footer p {
@@ -280,5 +279,13 @@ margin-top: 25px;
      overflow: hidden;
      border: none;
    }
-
-
+.stripe-bar-skinny {
+      display: flex;
+      height: 3px;
+margin-top: 50px;
+margin-bottom: 50px;
+    }
+    .stripe-bar-skinny .s { flex: 1; }
+    .stripe-bar-skinny .s-red-skinny   { background: #EF1A2D; }
+    .stripe-bar-skinny .s-white-skinny { background: rgba(255,255,255,.6); }
+    .stripe-bar-skinny .s-blue-skinny  { background: #0096D6; }

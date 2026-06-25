@@ -6,5 +6,3 @@
       car.style.transform =
         `translateX(-${scrollY * 3}px) rotate(-${scrollY * 0.03}deg)`;
     });
-
-    
