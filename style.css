@@ -115,7 +115,7 @@ body {
   background-color: #c0001f;
 }
 
-hr {
+.hr-web {
   border: none;
   height: 3px;
   background-color: #EF1A2D;
@@ -220,6 +220,8 @@ footer p {
 .skills-bg { background: var(--carbon); 
 margin-left: 25px;
 margin-right: 25px;
+margin-bottom: 25px;
+margin-top: 25px;
 }
 
 
@@ -273,9 +275,10 @@ margin-right: 25px;
 
    .bar-track {
      height: 3px;
-     background: rgb(49, 49, 49);
+     background: rgb(109, 109, 109);
      border-radius: 2px;
      overflow: hidden;
+     border: none;
    }
 
 
