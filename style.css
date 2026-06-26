@@ -137,7 +137,7 @@ body {
 h2 {
   color: #EF1A2D;
   margin: 0 30px 16px 30px;
-       font-family: 'Orbitron', monospace;
+  font-family: 'Orbitron', monospace;
 }
 
 #about-me {
@@ -334,4 +334,23 @@ margin-bottom: 50px;
   background-color: #0f0f0f;
   border-radius: 20px;
 }
-  
+.about-me_h2,
+.skills_h2,
+.projects_h2,
+.contact_h2 {
+  display: inline-block;
+  background-color: #0A0A0A;
+  padding: 15px;
+  border-radius: 15px;
+  margin: 0 0 16px 0;
+  width: fit-content;
+}
+.projects_h2{
+  margin-left: 30px;
+}
+.contact_h2{
+  margin-left: -25px;
+}
+.skills_h2{
+  margin-left: 2px;
+}
