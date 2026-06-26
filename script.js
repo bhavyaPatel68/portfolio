@@ -53,3 +53,17 @@ document.getElementById("contactMessage").value = "";
 });
 window.addEventListener("scroll", handleScroll);
 window.addEventListener("load", updateCars);
+
+// light mode
+const themeToggle = document.getElementById("theme-toggle");
+const storedTheme = localStorage.getItem("theme");
+if (storedTheme === "light") {
+  document.body.classList.add("light-mode");
+  themeToggle.textContent = "dark";
+}
+themeToggle.addEventListener("click", function () {
+  document.body.classList.toggle("light-mode");
+  const isLight = document.body.classList.contains("light-mode");
+  themeToggle.textContent = isLight ? "Dark" : "Light";
+  localStorage.setItem("theme", isLight ? "light" : "dark");
+});
