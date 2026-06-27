@@ -16,7 +16,9 @@
 <a href="index.html#projects">Projects</a>
 <a href="index.html#contact">Contact</a>
 <a href="index.html">Portfolio</a>
-<button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark mode">Light</button>
+<button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark mode">
+  <img src="assets/lightIcon.svg" id="theme-icon" alt="Switch to light mode">
+</button>
 </div>
 </div>
 <div class="stripe-bar">
@@ -56,16 +58,18 @@
 <div class="skill-card">
 <div class="skill-name">Fonts &amp; Icons</div>
 <p class="skill-desc">
-            Orbitron font from
-<a href="https://fonts.google.com/specimen/Orbitron" target="_blank" rel="noopener noreferrer">Google Fonts</a>.
+            Fonts/Dark and light mode icons
+<a href="https://fonts.google.com/specimen/Orbitron" target="_blank" rel="noopener noreferrer">Fonts</a>.
+<a href = "https://fonts.google.com/icons?selected=Material+Symbols+Outlined:dark_mode:FILL@1;wght@400;GRAD@0;opsz@24&icon.query=dark+mode&icon.size=24&icon.color=%23e8eaed" target="_blank" rel="noopener noreferrer">Dark </a>
+<a href = "https://fonts.google.com/icons?selected=Material+Symbols+Outlined:light_mode:FILL@1;wght@400;GRAD@0;opsz@24&icon.query=light+mode&icon.size=24&icon.color=%23e8eaed" target="_blank" rel="noopener noreferrer">Light</a>
 </p>
 <hr class="bar-track">
 </div>
 <div class="skill-card">
 <div class="skill-name">Light and Dark Mode Toggle</div>
 <p class="skill-desc">
-            W3Schools dark/light mode
-<a href="https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp" target="_blank" rel="noopener noreferrer">W3Schools: How To Toggle Dark Mode</a>.
+            Youtube video explaining how to switch between light and dark mode.
+<a href="https://www.youtube.com/watch?v=_gKEUYarehE" target="_blank" rel="noopener noreferrer">Youtube</a>.
 </p>
 <hr class="bar-track">
 </div>
@@ -82,16 +86,19 @@
 </footer>
 <script>
 const themeToggle = document.getElementById("theme-toggle");
+const themeIcon = document.getElementById("theme-icon");
 const storedTheme = localStorage.getItem("theme");
 if (storedTheme === "light") {
-  document.body.classList.add("light-mode");
-  themeToggle.textContent = "dark";
+document.body.classList.add("light-mode");
+themeIcon.src = "assets/darkIcon.svg";
+themeIcon.alt = "Switch to dark mode";
 }
 themeToggle.addEventListener("click", function () {
-  document.body.classList.toggle("light-mode");
-  const isLight = document.body.classList.contains("light-mode");
-  themeToggle.textContent = isLight ? "Dark" : "Light";
-  localStorage.setItem("theme", isLight ? "light" : "dark");
+document.body.classList.toggle("light-mode");
+const isLight = document.body.classList.contains("light-mode");
+themeIcon.src = isLight ? "assets/darkIcon.svg" : "assets/lightIcon.svg";
+themeIcon.alt = isLight ? "Switch to dark mode" : "Switch to light mode";
+localStorage.setItem("theme", isLight ? "light" : "dark");
 });
 </script>
 </body>

@@ -22,6 +22,7 @@
   --input-bg: #1a1a1a;
   --input-border: #444;
   --white: #ffffff;
+  --form-title-text: #FF4D4D;
 }
 
 .light-mode {
@@ -45,6 +46,7 @@
   --stripe-mid: rgba(0,0,0,.15);
   --input-bg: #ffffff;
   --input-border: #ccc;
+  --form-title-text: #C8102E;
 }
 
 body {
@@ -62,7 +64,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 16px 30px;
-    font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
+  /*
+  position: sticky;
+  top: 0;
+  z-index: 100; */
 }
 
 .navbar-left {
@@ -99,6 +105,12 @@ body {
   text-decoration: underline;
 }
 
+.theme-toggle-btn img {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
 .theme-toggle-btn {
   background: none;
   border: 1px solid var(--white);
@@ -117,6 +129,15 @@ body {
 .stripe-bar {
   display: flex;
   height: 8px;
+}
+.stripe-bar-top {
+  display: flex;
+  height: 8px;
+/*
+  position: sticky;
+  top: 70px;
+  z-index: 100;
+  */
 }
 
 .stripe {
@@ -137,7 +158,7 @@ body {
 
 .hero {
   text-align: center;
-  padding: 40px 20px 80px;
+  padding: 40px 20px 75px;
   border-left: 6px solid var(--red);
   margin: 40px;
   background-color: var(--bg-hero);
@@ -151,8 +172,8 @@ body {
   display: block;
   margin: 0 auto 30px auto;
   transition: transform 0.05s linear;
-  margin-top: -100px;
-  margin-bottom: -100px;
+  margin-top: -90px;
+  margin-bottom: -140px;
 }
 #invert-ferrari-car {
   width: 900px;
@@ -336,7 +357,7 @@ margin-top: 25px;
      content: '';
      position: absolute;
      top: 0; left: 0; right: 0;
-     height: 2px;
+     height: 3px;
      background: linear-gradient(90deg, var(--red), transparent);
    }
 
@@ -433,7 +454,7 @@ margin-bottom: 50px;
 .contact-info-item a:hover { text-decoration: underline; }
 
 .contact-form-title {
-  color: var(--red-text);
+  color: var(--text-primary);
   font-family: 'Orbitron', monospace;
   font-size: 18px;
   margin: 0 0 16px 0;
@@ -475,6 +496,6 @@ margin-bottom: 50px;
   background-position: left center;
   margin-top: 150px;
 }
-html,body{
-  overflow-x: hidden;
+html, body {
+  overflow-x: clip;
 }

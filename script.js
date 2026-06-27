@@ -56,13 +56,26 @@ window.addEventListener("scroll", handleScroll);
 window.addEventListener("load", updateCars);
 
 //light mode
-const themeToggle = document.getElementById("theme-toggle");
-const storedTheme = localStorage.getItem("theme");
-
-themeToggle.addEventListener("click", function () {
-  //switches the theme and figures out what mode is active so it can change the button text
-  document.body.classList.toggle("light-mode");
-  const isLight = document.body.classList.contains("light-mode");
-  themeToggle.textContent = isLight ? "Dark" : "Light";
-  localStorage.setItem("theme", isLight ? "light" : "dark");
-});
+let lightmode = localStorage.getItem('lightmode')
+const themeToggle = document.getElementById('theme-toggle')
+const themeIcon = document.getElementById('theme-icon')
+//function to do the work later
+const enableLightmode = () => {
+  document.body.classList.add('light-mode')
+  themeIcon.src = "assets/darkIcon.svg"
+  themeIcon.alt = "Switch to dark mode"
+  localStorage.setItem('lightmode', 'active')
+}
+//function to do the work later
+const disableLightmode = () => {
+  document.body.classList.remove('light-mode')
+  themeIcon.src = "assets/lightIcon.svg"
+  themeIcon.alt = "Switch to light mode"
+  localStorage.setItem('lightmode', null)
+}
+// uses functions to switch
+if (lightmode === "active") enableLightmode()
+themeToggle.addEventListener("click", () => {
+  lightmode = localStorage.getItem('lightmode')
+  lightmode !== "active" ? enableLightmode() : disableLightmode()
+})
