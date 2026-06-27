@@ -4,7 +4,7 @@
   --bg-hero: #222;
   --bg-panel: #0f0f0f;
   --bg-badge: #0A0A0A;
-  --carbon: #161616;
+  --carbon: #1a1a1a;
   --panel: #232323;
   --silver: #ccc;
   --text-primary: #f0f0f0;
@@ -22,7 +22,6 @@
   --input-bg: #1a1a1a;
   --input-border: #444;
   --white: #ffffff;
-  --carbon: #1a1a1a;
 }
 
 .light-mode {
@@ -31,7 +30,7 @@
   --bg-hero: #ffffff;
   --bg-panel: #ffffff;
   --bg-badge: #ffffff;
-  --carbon: #ececec;
+  --carbon: #f7f7f7;
   --panel: #ffffff;
   --silver: #4a4a4a;
   --text-primary: #1a1a1a;
@@ -46,7 +45,6 @@
   --stripe-mid: rgba(0,0,0,.15);
   --input-bg: #ffffff;
   --input-border: #ccc;
-  --carbon: #f7f7f7;
 }
 
 body {
@@ -166,6 +164,16 @@ body {
   margin-bottom: -100px;
   position: relative;
   top: -55px;
+}
+#bottom-ferrari-car {
+  width: 900px;
+  max-width: 95%;
+  display: block;
+  margin: 0 auto 30px auto;
+  transition: transform 0.05s linear;
+  margin-top: -120px;
+  margin-bottom: -120px;
+  position: relative;
 }
 
 .hero-label {
