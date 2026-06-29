@@ -65,10 +65,10 @@ body {
   align-items: center;
   padding: 16px 30px;
   font-family: 'Inter', sans-serif;
-  /*
+  
   position: sticky;
   top: 0;
-  z-index: 100; */
+  z-index: 100;
 }
 
 .navbar-left {
@@ -133,11 +133,11 @@ body {
 .stripe-bar-top {
   display: flex;
   height: 8px;
-/*
+
   position: sticky;
   top: 70px;
   z-index: 100;
-  */
+
 }
 
 .stripe {
@@ -193,7 +193,7 @@ body {
   margin: 0 auto 30px auto;
   transition: transform 0.05s linear;
   margin-top: -120px;
-  margin-bottom: -120px;
+  margin-bottom: -105px;
   position: relative;
 }
 
@@ -358,7 +358,6 @@ margin-top: 25px;
      position: absolute;
      top: 0; left: 0; right: 0;
      height: 3px;
-     background: linear-gradient(90deg, var(--red), transparent);
    }
 
    .skill-name {
@@ -441,6 +440,7 @@ margin-bottom: 50px;
   margin: 20px auto 0;
   max-width: 400px;
   text-align: left;
+  
 }
 
 .contact-info-item {
@@ -498,4 +498,8 @@ margin-bottom: 50px;
 }
 html, body {
   overflow-x: clip;
+}
+
+.source-links{
+  text-decoration: none;
 }

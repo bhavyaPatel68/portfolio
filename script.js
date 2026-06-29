@@ -13,7 +13,7 @@ const bottomCarLoc = invertCar.getBoundingClientRect();
 // takes height of your screen
 const windowHeight = window.innerHeight;
 //figures out how much should be complete depending on how much you have scrolled from 0-1
-let progress = (windowHeight - bottomCarLoc.top) / (windowHeight * 1.2);
+let progress = (windowHeight - bottomCarLoc.top) / (windowHeight * 2);
 //make sure the value is always between 0-1 to represent how much of the animation is done
 progress = Math.min(Math.max(progress, 0), 1);
 // starts the car off the screen to the left
