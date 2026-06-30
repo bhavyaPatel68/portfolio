@@ -37,6 +37,7 @@
   --fs-hero-name:48px;
   --fs-hero-label:14px;
   --hero-p:16px;
+  --contact-form-width:400px;
 }
 
 .light-mode {
@@ -76,7 +77,8 @@
   --fs-h2:36px;
   --fs-hero-name:60px;
   --fs-hero-label:26px;
-   --hero-p:28px;
+  --hero-p:28px;
+  --contact-form-width:600px;
 }
 
 .font-regular{
@@ -495,7 +497,7 @@ margin-bottom: 50px;
   border-radius: 10px;
   padding: 16px 24px;
   margin: 20px auto 0;
-  max-width: 400px;
+  max-width: var(--contact-form-width);
   text-align: left;
   
 }
@@ -526,7 +528,7 @@ margin-bottom: 50px;
   color: var(--text-primary);
   padding: 10px 12px;
   margin-bottom: 12px;
-  font: 14px 'Inter', sans-serif;
+  font: var(--fs-skill-desc) 'Inter', sans-serif;
   box-sizing: border-box;
 }
 
@@ -540,6 +542,7 @@ margin-bottom: 50px;
   width: 100%;
   border: none;
   cursor: pointer;
+  font-size: var(--fs-skill-desc);
 }
 
 .contact-form-box { background-color: var(--bg-card); }
