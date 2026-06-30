@@ -503,3 +503,19 @@ html, body {
 .source-links{
   text-decoration: none;
 }
+
+.source-links,
+.source-links:link,
+.source-links:visited {
+  color: var(--text-primary); 
+  text-decoration: none;
+}
+
+.source-links:hover {
+  color: #e10600; 
+  text-decoration: underline;
+}
+
+.source-links:active {
+  color: #e10600;
+}
