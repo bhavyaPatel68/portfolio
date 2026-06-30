@@ -73,6 +73,27 @@ const disableLightmode = () => {
   themeIcon.alt = "Switch to light mode"
   localStorage.setItem('lightmode', null)
 }
+
+//font size toggle
+let largeFont = localStorage.getItem('largeFont')
+const fontToggle = document.getElementById('font-toggle')
+
+const enableLargeFont = () => {
+  document.body.classList.add('font-large')
+  localStorage.setItem('largeFont', 'active')
+}
+
+const disableLargeFont = () => {
+  document.body.classList.remove('font-large')
+  localStorage.setItem('largeFont', null)
+}
+//uses the functon to switch the font
+if (largeFont === "active") enableLargeFont()
+fontToggle.addEventListener("click", () => {
+  largeFont = localStorage.getItem('largeFont')
+  largeFont !== "active" ? enableLargeFont() : disableLargeFont()
+})
+
 // uses functions to switch
 if (lightmode === "active") enableLightmode()
 themeToggle.addEventListener("click", () => {
