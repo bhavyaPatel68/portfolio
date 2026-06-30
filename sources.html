@@ -9,7 +9,7 @@
 <div class="navbar">
 <div class="navbar-left">
 <img src="assets/logo.png" alt="Ferrari Logo" class="navbar-logo">
-<h1 class="navbar-h1">Bhavya Patel</h1>
+<a href="#hero" class="navbar-h1-link"><h1 class="navbar-h1">Bhavya Patel</h1></a>
 </div>
 <div class="nav-links">
 <a href="index.html#about-me">About Me</a>
@@ -17,6 +17,9 @@
 <a href="index.html#projects">Projects</a>
 <a href="index.html#contact">Contact</a>
 <a href="index.html">Portfolio</a>
+  <button id="font-toggle" class="font-toggle-btn" aria-label="Toggle font size">
+  <img src="assets/font.svg" id="font-size" alt="Switch font size">
+</button>
 <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark mode">
   <img src="assets/lightIcon.svg" id="theme-icon" alt="Switch to light mode">
 </button>
@@ -27,7 +30,7 @@
 <div class="stripe white"></div>
 <div class="stripe blue"></div>
 </div>
-<div class="hero">
+<div class="hero" >
 <p class="hero-label">REFERENCES &amp; CREDITS</p>
 <h2 class="hero-name">Sources</h2>
 <p>Where the assets, code, and ideas on this site came from</p>
@@ -101,6 +104,18 @@ themeIcon.src = isLight ? "assets/darkIcon.svg" : "assets/lightIcon.svg";
 themeIcon.alt = isLight ? "Switch to dark mode" : "Switch to light mode";
 localStorage.setItem("theme", isLight ? "light" : "dark");
 });
+
+const fontToggle = document.getElementById("font-toggle");
+const storedFont = localStorage.getItem("largeFont");
+if (storedFont === "active") {
+document.body.classList.add("font-large");
+}
+fontToggle.addEventListener("click", function () {
+document.body.classList.toggle("font-large");
+const isLarge = document.body.classList.contains("font-large");
+localStorage.setItem("largeFont", isLarge ? "active" : null);
+});
 </script>
+
 </body>
 </html>

@@ -32,6 +32,11 @@
   --fs-contact-text: 18px;
   --fs-contact-info: 16px;
   --fs-contact-form-title: 18px;
+  --fs-project-title: 20px;
+  --fs-project-desc: 16px;
+  --fs-hero-name:48px;
+  --fs-hero-label:14px;
+  --hero-p:16px;
 }
 
 .light-mode {
@@ -59,14 +64,19 @@
 }
 
 .font-large {
-  --fs-nav-link: 20px;
-  --fs-h2:28px;
-  --fs-about-me: 22px;
-  --fs-skill-name: 20px;
-  --fs-skill-desc: 18px;
-  --fs-contact-text: 22px;
-  --fs-contact-info: 20px;
-  --fs-contact-form-title: 22px;
+  --fs-nav-link: 32px;
+  --fs-about-me: 34px;
+  --fs-skill-name: 32px;
+  --fs-skill-desc: 30px;
+  --fs-contact-text: 34px;
+  --fs-contact-info: 34px;
+  --fs-contact-form-title: 34px;
+  --fs-project-title: 36px;
+  --fs-project-desc: 32px;
+  --fs-h2:36px;
+  --fs-hero-name:60px;
+  --fs-hero-label:26px;
+   --hero-p:28px;
 }
 
 .font-regular{
@@ -109,7 +119,7 @@ body {
 .navbar h1 {
   color: var(--white);
   margin: 0;
-  font-size: 24px;
+  font-size: var(--fs-h2);
   font-family: 'Orbitron', monospace;
 }
 
@@ -242,20 +252,21 @@ body {
 
 .hero-label {
   color: var(--red-text);
-  font-size: 14px; /*change*/
+  font-size: var(--fs-hero-label); /*change*/
   letter-spacing: 3px;
   text-transform: uppercase;
 }
 
 .hero-name {
   color: var(--text-primary);
-  font-size: 48px;
+  font-size: var(--fs-hero-name);
   margin: 10px 0;
   font-family: 'Orbitron', monospace;
 }
 
 .hero p {
   color: var(--text-muted);
+  font-size: var(--hero-p);
 }
 
 .red-button {
@@ -333,14 +344,16 @@ h2 {
 }
 
 .project-card h3 {
-font-family: 'Orbitron', monospace;
-margin-bottom: 5px;
+  font-family: 'Orbitron', monospace;
+  margin-bottom: 5px;
   color: var(--text-primary);
+  font-size: var(--fs-project-title);
 }
 
 .project-card p {
-    font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--text-secondary);
+  font-size: var(--fs-project-desc);
 }
 
 .project-card h3,
@@ -542,6 +555,7 @@ margin-bottom: 50px;
 }
 html, body {
   overflow-x: clip;
+  scroll-behavior: smooth;
 }
 
 .source-links{
@@ -562,4 +576,7 @@ html, body {
 
 .source-links:active {
   color: #e10600;
+}
+.navbar-h1-link {
+  text-decoration: none;
 }
