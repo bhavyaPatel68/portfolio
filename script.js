@@ -42,15 +42,6 @@ requestAnimationFrame(updateCars);
 ticking = true;
   }
 }
-//contact form text removal
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-//stops page from reloading
-e.preventDefault();
-// clears the textboxes
-document.getElementById("contactName").value = "";
-document.getElementById("contactSubject").value = "";
-document.getElementById("contactMessage").value = "";
-});
 
 window.addEventListener("scroll", handleScroll);
 window.addEventListener("load", updateCars);
@@ -100,3 +91,27 @@ themeToggle.addEventListener("click", () => {
   lightmode = localStorage.getItem('lightmode')
   lightmode !== "active" ? enableLightmode() : disableLightmode()
 })
+
+// working email system
+emailjs.init("oihFrGir6DXIRAf3v");
+function sendMail(){
+  let parms = {
+    name: document.getElementById("contactName").value,
+    email: document.getElementById("contactEmail").value,
+    subject: document.getElementById("contactSubject").value,
+    message: document.getElementById("contactMessage").value,
+  };
+
+  emailjs.send("service_aitnooa", "template_mt7xnyo", parms)
+    .then(function () {
+      alert("Message sent. Thank you for reaching out.");
+      document.getElementById("contactName").value = "";
+      document.getElementById("contactEmail").value = "";
+      document.getElementById("contactSubject").value = "";
+      document.getElementById("contactMessage").value = "";
+    })
+    .catch(function (error) {
+      alert("Something went wrong — please try again or email me directly.");
+      console.error("EmailJS error:", error);
+    });
+}

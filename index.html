@@ -5,6 +5,16 @@
   <title>Bhavya Patel's Portfolio</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "oihFrGir6DXIRAf3v",
+          });
+      })();
+    </script>
 </head>
 
 <body>
@@ -103,7 +113,6 @@
 
   <div id="projects">
     <h2 class = "projects_h2">Projects</h2>
-
     <a class="project-card" href="https://bhavyapatel68.github.io/int-u2-project-starter-code-2/" target="_blank" rel="noopener noreferrer" aria-label="Mens Mental Health Awareness project">
       <h3>Mens Mental Health Awareness</h3>
       <p>I made this website to advocate the importance of men's mental health because too many men feel pressured to hide their emotions and struggles. This can prevent them from seeking help when they need it most. By raising awareness, we can encourage open conversations and support better mental well-being for everyone.</p>
@@ -148,11 +157,12 @@
   <div class="contact-form-box">
     <h3 class="contact-form-title">Send me a message</h3>
     <form id="contactForm">
-      <input type="text" id="contactName" placeholder="Your Name" required>
-      <input type="text" id="contactSubject" placeholder="Subject" required>
-      <textarea id="contactMessage" placeholder="Your Message" rows="4" required></textarea>
-      <button type="submit" class="red-button">Send</button>
-    </form>
+    <input type="text" id="contactName" name="name" placeholder="Your Name" required>
+    <input type="text" id="contactEmail" name="email" placeholder="Your Email" required>
+    <input type="text" id="contactSubject" name="subject" placeholder="Subject" required>
+    <textarea id="contactMessage" name="message" placeholder="Your Message" rows="4" required></textarea>
+    <button class="red-button" type="button" onclick="sendMail()">Send</button>
+</form>
   </div>
 </div>
   </div>
