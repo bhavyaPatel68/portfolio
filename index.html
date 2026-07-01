@@ -12,6 +12,10 @@
       (function(){
           emailjs.init({
             publicKey: "oihFrGir6DXIRAf3v",
+              limitRate: {
+                id: 'app',
+                throttle: 10000,
+              },
           });
       })();
     </script>
