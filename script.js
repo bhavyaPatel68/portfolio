@@ -42,7 +42,7 @@ requestAnimationFrame(updateCars);
 ticking = true;
   }
 }
-
+// does the functions
 window.addEventListener("scroll", handleScroll);
 window.addEventListener("load", updateCars);
 
@@ -65,27 +65,27 @@ const disableLightmode = () => {
   localStorage.setItem('lightmode', null)
 }
 
-//font size toggle
+//font size changer
 let largeFont = localStorage.getItem('largeFont')
 const fontToggle = document.getElementById('font-toggle')
-
+//function to do the work later
 const enableLargeFont = () => {
   document.body.classList.add('font-large')
   localStorage.setItem('largeFont', 'active')
 }
-
+//function to do the work later
 const disableLargeFont = () => {
   document.body.classList.remove('font-large')
   localStorage.setItem('largeFont', null)
 }
-//uses the functon to switch the font
+//uses the functions to change font
 if (largeFont === "active") enableLargeFont()
 fontToggle.addEventListener("click", () => {
   largeFont = localStorage.getItem('largeFont')
   largeFont !== "active" ? enableLargeFont() : disableLargeFont()
 })
 
-// uses functions to switch
+// uses the functions to change color scheme
 if (lightmode === "active") enableLightmode()
 themeToggle.addEventListener("click", () => {
   lightmode = localStorage.getItem('lightmode')
